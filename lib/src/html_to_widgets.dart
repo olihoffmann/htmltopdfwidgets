@@ -658,7 +658,7 @@ class WidgetsHTMLDecoder {
         if (src.startsWith("http") || src.startsWith("https")) {
           final netImage = await _saveImage(src);
           return Image(MemoryImage(netImage),
-              alignment: customStyles.imageAlignment);
+              alignment: customStyles.imageAlignment, width: 200);
         }
         final localImage = File(src);
         if (await localImage.exists()) {
